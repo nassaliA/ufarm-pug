@@ -1,0 +1,85 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Farmer One&apos;s Urban Farmers Registry
+  link(rel='stylesheet' href='styles.css/ufarm.css')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous')
+a(href='ufarmL.pug') home
+aside#sidebar.sidebar
+  ul#sidebar-nav.sidebar-nav
+    li
+      a(href='#registry') Urban Farmer Registry
+    li
+      a(href='#inspection') Inspect Produce
+    li
+      a(href='#approve') approve produce for listing
+    li
+      a(href='#view-bookings') View bookings and order
+h1#registry Urban Farmers Registry
+form
+  label(for='name') Name:
+  input#name(type='text' name='name' required='')
+  br
+  label(for='gender') Gender:
+  select#gender(name='gender' required='')
+    option(value='male') Male
+    option(value='female') Female
+    option(value='other') Other
+  br
+  label(for='dob') Date of Birth:
+  input#dob(type='date' name='dob' required='')
+  br
+  label(for='activities') Activities Undertaken:
+  textarea#activities(name='activities' rows='4' cols='50' required='')
+  br
+  label(for='contacts') Contacts:
+  input#contacts(type='text' name='contacts' required='')
+  br
+  label(for='nin') National Identification Number (NIN):
+  input#nin(type='text' name='nin' required='')
+  br
+  label(for='unique-id') Assign Unique ID:
+  input#unique-id(type='text' name='unique-id' required='')
+  br
+  input(type='submit' value='Register')
+hr
+h2#inspection Inspect Agriculture Produce
+form
+  label(for='unique-id') Urban Farmer Unique ID:
+  input#unique-id(type='text' name='unique-id' required='')
+  br
+  label(for='produce') Produce:
+  input#produce(type='text' name='produce' required='')
+  br
+  input(type='submit' value='Inspect')
+hr
+h2#approve Approve Produce for Listing
+form
+  label(for='unique-id') Urban Farmer Unique ID:
+  input#unique-id(type='text' name='unique-id' required='')
+  br
+  label(for='produce') Produce:
+  input#produce(type='text' name='produce' required='')
+  br
+  input(type='submit' value='Approve')
+hr
+h2#view-bookings View Bookings and Orders
+table
+  tr
+    th Date
+    th Customer
+    th Produce
+    th Quantity
+  tr
+    td 2023-03-25
+    td John Doe
+    td Tomatoes
+    td 10kg
+  tr
+    td 2023-03-26
+    td Jane Doe
+    td Cucumbers
+    td 5kg
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js' integrity='sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN' crossorigin='anonymous')
