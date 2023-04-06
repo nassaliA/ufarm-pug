@@ -46,7 +46,7 @@ main
               a.nav-link(href='#appoint-new-farmer-one') Appoint new Farmer One
   // Register Farmer One
   h2#register-a-new-farmer Register Farmer 0ne
-  form(action='#' method='post')
+  form(action='/admin' method='post')
     label(for='farmerName') Farmer Name:
     input#farmerName(type='text' name='farmerName')
     br
@@ -110,7 +110,7 @@ main
   hr
   // Update Farmer One's Contact Details
   h2#update-details Update Farmer One&apos;s Contact Details
-  form(action='#' method='post')
+  form(action='/admin' method='post')
     label(for='farmerPhone') New Phone Number:
     input#farmerPhone(type='text' name='farmerPhone')
     br
@@ -121,7 +121,7 @@ main
   hr
   // Appoint a New Farmer One
   h2#appoint-new-farmer-one Appoint a New Farmer One
-  form(action='#' method='post')
+  form(action='/admin' method='post')
     label(for='newFarmerName') New Farmer Name:
     input#newFarmerName(type='text' name='newFarmerName')
     br
